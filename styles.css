@@ -126,7 +126,97 @@ main {
     margin-bottom: 0.75rem;
 }
 
+/* Region Sections */
+.region-section {
+    margin-bottom: 1.5rem;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.region-header {
+    background-color: #1B2E22; /* Dark green */
+    color: #FFFFFF;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.region-header:hover {
+    background-color: #545C49; /* Green */
+}
+
+.region-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.region-header p {
+    margin: 0;
+    color: #AA7D56; /* Yellow */
+    font-size: 0.9rem;
+}
+
+.toggle-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.region-section.collapsed .toggle-icon {
+    transform: rotate(-90deg);
+}
+
+.region-content {
+    transition: all 0.3s ease;
+}
+
 /* Food Resources Table */
+.resource-table {
+    width: 100%;
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.resource-table thead {
+    background-color: #545C49; /* Green */
+    color: #FFFFFF;
+}
+
+.resource-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom: 2px solid #AA7D56; /* Yellow */
+}
+
+.resource-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #E0E0E0;
+    vertical-align: top;
+}
+
+.resource-table tbody tr:hover {
+    background-color: #F0F0E8;
+}
+
+.resource-table tbody tr:nth-child(even) {
+    background-color: #FAFAF8;
+}
+
+.resource-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Legacy table styling for compatibility */
 .resources-table {
     width: 100%;
     background-color: #FFFFFF;
@@ -180,6 +270,104 @@ footer p {
     font-size: 0.9rem;
 }
 
+/* Breadcrumb Navigation */
+.breadcrumb {
+    margin-top: 1rem;
+}
+
+.breadcrumb a {
+    color: #AA7D56; /* Yellow */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+/* Resource Preview Section */
+.resource-preview {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid #545C49; /* Green */
+    margin-top: 1rem;
+}
+
+.resource-link-button {
+    display: inline-block;
+    background-color: #470A12; /* Red */
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resource-link-button:hover {
+    background-color: #1B2E22; /* Dark green */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Intro Section for Food Resources Page */
+.intro-section {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border-left: 4px solid #470A12; /* Red */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.region-guide {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #E0E0E0;
+}
+
+.region-guide h3 {
+    color: #1B2E22; /* Dark green */
+    margin-bottom: 1rem;
+}
+
+.region-guide ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.region-guide li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.region-color {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.region-color.blue { color: #0066CC; }
+.region-color.orange { color: #FF6600; }
+.region-color.green { color: #009900; }
+.region-color.gray { color: #666666; }
+.region-color.brown { color: #8B4513; }
+
+/* Resource Container */
+.resource-container {
+    margin-top: 2rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
@@ -194,6 +382,67 @@ footer p {
         border-bottom: 1px solid #E0E0E0;
     }
 
+    .region-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .region-header h3 {
+        font-size: 1.3rem;
+    }
+
+    .resource-table {
+        font-size: 0.9rem;
+    }
+
+    .resource-table th,
+    .resource-table td {
+        padding: 0.75rem 0.5rem;
+    }
+
+    /* Stack table cells on mobile */
+    .resource-table, 
+    .resource-table thead, 
+    .resource-table tbody, 
+    .resource-table th, 
+    .resource-table td, 
+    .resource-table tr {
+        display: block;
+    }
+
+    .resource-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .resource-table tr {
+        border: 1px solid #E0E0E0;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        background-color: #FFFFFF;
+        border-radius: 8px;
+    }
+
+    .resource-table td {
+        border: none;
+        position: relative;
+        padding: 0.5rem 0.5rem 0.5rem 35%;
+        border-bottom: 1px solid #E0E0E0;
+    }
+
+    .resource-table td:before {
+        content: attr(data-label) ": ";
+        position: absolute;
+        left: 6px;
+        width: 30%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #1B2E22;
+    }
+
     .resources-table {
         font-size: 0.9rem;
     }
@@ -202,11 +451,42 @@ footer p {
     .resources-table td {
         padding: 0.75rem 0.5rem;
     }
+
+    .region-guide ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .intro-section {
+        padding: 1.5rem;
+    }
+
+    .resource-preview {
+        padding: 1.5rem;
+    }
+
+    .resource-link-button {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
     main {
         padding: 0 1rem;
+    }
+
+    .resource-table {
+        font-size: 0.8rem;
+    }
+
+    .resource-table th,
+    .resource-table td {
+        padding: 0.5rem 0.25rem;
+    }
+
+    .resource-table td {
+        padding: 0.5rem 0.25rem 0.5rem 35%;
     }
 
     .resources-table {

@@ -14,7 +14,7 @@
 
     <nav class="tabs">
         <button class="tab-button active" onclick="openTab(event, 'home')">Home</button>
-        <button class="tab-button" onclick="openTab(event, 'food-resources')">Food Resources</button>
+        <a href="food-resources.html" class="tab-button">Food Resources</a>
     </nav>
 
     <main>
@@ -32,26 +32,11 @@
                 <p>If you have any questions or need further assistance, please reach out to us at <a href="mailto:info@resources4u.com">info@resources4u.com</a>.</p>
             </div>
         </div>
-        <div id="food-resources" class="tab-content">
-            <h2>Food Resources</h2>
-            <p>A local list for when you need food assistance.</p>
-            <p style="margin:0; color:#AA7D56; font-weight:600; font-style:italic;">With the government shutdown, it's important we know where our community is here to support you.</p>
-            <p>Below is a picture of the WIC regions. Use this guide to view programs by state regions, rather than just cities.</p>
-            <p>West = Blue</p>
-            <p>Central = Orange</p>
-            <p>South Central = Green</p>
-            <p>Northeast = Gray</p>
-            <p>Southeast = Brown</p>
-      </div>  
-      <div id="SDresourceList">
-        <!-- Resources will be loaded here by JavaScript -->
-      </div>
     </main>
 
     <footer>
         <p>&copy; 2024 Resources for U. All rights reserved.</p>
     </footer>
-    <script type="module" src="resources.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

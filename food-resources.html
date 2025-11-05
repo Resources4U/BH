@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Resources - BH Resources for U</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Food Resources</h1>
+        <p>A local list for when you need food assistance.</p>
+        <nav class="breadcrumb">
+            <a href="index.html">← Back to Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="intro-section">
+            <p style="margin:0; color:#AA7D56; font-weight:600; font-style:italic;">With the government shutdown, it's important we know where our community is here to support you.</p>
+            <p>Below are food pantries and assistance programs organized by region. Click on each region to expand and view available resources.</p>
+            
+            <div class="region-guide">
+                <h3>Region Guide:</h3>
+                <ul>
+                    <li><span class="region-color blue">■</span> West = Blue</li>
+                    <li><span class="region-color orange">■</span> Central = Orange</li>
+                    <li><span class="region-color green">■</span> South Central = Green</li>
+                    <li><span class="region-color gray">■</span> Northeast = Gray</li>
+                    <li><span class="region-color brown">■</span> Southeast = Brown</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="SDresourceList" class="resource-container">
+            <!-- Resources will be loaded here by JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Resources for U. All rights reserved.</p>
+    </footer>
+    
+    <script type="module" src="resourcespull.js"></script>
+</body>
+</html>
