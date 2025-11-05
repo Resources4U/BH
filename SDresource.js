@@ -98,4 +98,4 @@ const SDresourceList = [
     notes: "",
   },
 ];
-module.exports = SDresourceList;
+export default SDresourceList;
