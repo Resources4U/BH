@@ -21,13 +21,13 @@ function renderResourceList() {
   // Create expandable sections for each region
   Object.keys(resourcesByRegion).forEach(region => {
     const regionSection = document.createElement("div");
-    regionSection.classList.add("region-section");
+    regionSection.classList.add("region-section", "collapsed");
     
     // Create region header (clickable to expand/collapse)
     const regionHeader = document.createElement("div");
     regionHeader.classList.add("region-header");
     regionHeader.innerHTML = `
-      <h3>${region} <span class="toggle-icon">▼</span></h3>
+      <h3>${region} <span class="toggle-icon">▶</span></h3>
       <p>${resourcesByRegion[region].length} resources available</p>
     `;
     regionHeader.addEventListener('click', () => toggleRegion(regionHeader));
@@ -66,6 +66,7 @@ function renderResourceList() {
     // Create collapsible content container
     const regionContent = document.createElement("div");
     regionContent.classList.add("region-content");
+    regionContent.style.display = 'none'; // Start collapsed
     regionContent.appendChild(table);
     
     regionSection.appendChild(regionHeader);
