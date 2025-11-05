@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BH - Resources for U</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>BH Resources</h1>
+        <p>Resources for U</p>
+    </header>
+
+    <nav class="tabs">
+        <button class="tab-button active" onclick="openTab(event, 'home')">Home</button>
+        <button class="tab-button" onclick="openTab(event, 'food-resources')">Food Resources</button>
+    </nav>
+
+    <main>
+        <div id="home" class="tab-content active">
+            <h2>Welcome to BH Resources</h2>
+            <p>Find the resources you need to support your community.</p>
+            <div class="info-section">
+                <h3>Our Mission</h3>
+                <p>We are dedicated to connecting people with essential resources in their community. Whether you're looking for food assistance, community support, or other vital services, we're here to help.</p>
+            </div>
+            <div class="info-section">
+                <h3>How to Use This Site</h3>
+                <p>Navigate through the tabs above to find different types of resources. Each section provides detailed information about available services and how to access them.</p>
+            </div>
+        </div>
+
+        <div id="food-resources" class="tab-content">
+            <h2>Food Resources</h2>
+            <p>Find food assistance programs and resources in your area.</p>
+            <table class="resources-table">
+                <thead>
+                    <tr>
+                        <th>Organization</th>
+                        <th>Location</th>
+                        <th>Services</th>
+                        <th>Hours</th>
+                        <th>Contact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Community Food Bank</td>
+                        <td>123 Main Street</td>
+                        <td>Food pantry, hot meals</td>
+                        <td>Mon-Fri: 9am-5pm</td>
+                        <td>(555) 123-4567</td>
+                    </tr>
+                    <tr>
+                        <td>Local Soup Kitchen</td>
+                        <td>456 Oak Avenue</td>
+                        <td>Daily meals, groceries</td>
+                        <td>Daily: 11am-2pm</td>
+                        <td>(555) 234-5678</td>
+                    </tr>
+                    <tr>
+                        <td>Neighborhood Pantry</td>
+                        <td>789 Elm Street</td>
+                        <td>Food boxes, fresh produce</td>
+                        <td>Tue-Thu: 10am-4pm</td>
+                        <td>(555) 345-6789</td>
+                    </tr>
+                    <tr>
+                        <td>Emergency Food Services</td>
+                        <td>321 Pine Road</td>
+                        <td>Emergency assistance, SNAP enrollment</td>
+                        <td>Mon-Sat: 8am-6pm</td>
+                        <td>(555) 456-7890</td>
+                    </tr>
+                    <tr>
+                        <td>Senior Nutrition Program</td>
+                        <td>654 Maple Drive</td>
+                        <td>Senior meals, delivery available</td>
+                        <td>Mon-Fri: 10am-3pm</td>
+                        <td>(555) 567-8901</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BH Resources. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
